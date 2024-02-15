@@ -1,8 +1,8 @@
 ## INTERFACING DIGITAL INPUT SENSOR WITH ARDUINO PUSH BUTTON
-## DATE :
-## NAME :																			             
-## ROLLNUMBER :
-## DEPARTMENT 
+## DATE : 15/02/2024
+## NAME : Anbuselvan.S																			             
+## ROLLNUMBER : 212223240008
+## DEPARTMENT : AIML
 
 
 ## AIM:
@@ -52,8 +52,7 @@ FIGURE-02
 ## CIRCUIT DIAGRAM 
 
 
-![image](https://user-images.githubusercontent.com/36288975/163530437-87a0afbd-b3c9-44ad-b907-5de63486fb9d.png)
-
+![Screenshot 2024-02-15 111519](https://github.com/anbuselvan1519/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/139841744/5fa93e58-5454-4fcc-b068-6e0175edb585)
 
 
 FIGURE -03
@@ -62,24 +61,34 @@ FIGURE -03
 
 
 ## PROGRAM 
- 
- 
+```
+int led=4;
+int pb=3;
+void setup()
+{
+  pinMode(led, OUTPUT);
+  pinMode(pb, INPUT);
+}
 
-
-
-
-
-
-
-
-
- 
- 
- 
-
-
-
+void loop()
+{
+  int pb1;
+  pb1=digitalRead(pb);
+  if(pb1==HIGH)
+{
+  digitalWrite(led, HIGH);
+  delay(500); // Wait for 1000 millisecond(s)
+  digitalWrite(led, LOW);
+  delay(500); // Wait for 1000 millisecond(s)
+}
+else{
+  delay(500);
+  digitalWrite(led,LOW);
+}
+}
+```
 ## OUTPUT OF SIMULATION :
 
-[My image](username.github.com/repository/img/image.jpg)
+![Screenshot 2024-02-15 105901](https://github.com/anbuselvan1519/-INTERFACING-DIGITAL-INPUT-SENSOR-WITH-ARDUINO-PUSH-BUTTON-/assets/139841744/7a4e5299-5f64-4fa4-abc8-ddb0582b4ddd)
+
 
